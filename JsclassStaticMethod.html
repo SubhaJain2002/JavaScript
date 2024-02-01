@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Class Static Methods</h1>
+<p>To use the "myAnimal" object inside the static method, you can send it as parameter.</p>
+
+<p id="name"></p>
+
+<script>
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello " + x.name;
+  }
+}
+
+const myAnimal = new Animal("Cat");
+document.getElementById("name").innerHTML = Animal.hello(myAnimal);
+</script>
+
+</body>
+</html>
